@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Delivery</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Ship</a></li>
+        <li><a href="#">Track</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+    <div class="account-links">
+      <a href="#">Sign In</a>
+      <a href="#" class="btn">Create Account</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Ship, Track & Deliver with Confidence</h1>
+      <p>Fast, reliable, and secure shipping solutions tailored to you.</p>
+
+      <!-- Tracking Box -->
+      <div class="tracking-box">
+        <input type="text" id="trackingInput" placeholder="Enter your tracking number">
+        <button class="btn" onclick="trackPackage()">Track</button>
+      </div>
+
+      <!-- Tracking result -->
+      <div id="trackingResult" style="margin-top:1rem; font-weight:bold;"></div>
+    </div>
+  </section>
+
+  <!-- Features (Bottom Section) -->
+  <section class="features">
+    <div class="feature-card">
+      <h2>🌍 Global Coverage</h2>
+      <p>We deliver to over 220 countries and territories worldwide with unmatched reliability.</p>
+    </div>
+    <div class="feature-card">
+      <h2>⚡ Fast Delivery</h2>
+      <p>Express shipping to meet your urgent deadlines, on time every time.</p>
+    </div>
+    <div class="feature-card">
+      <h2>🔒 Trusted & Secure</h2>
+      <p>With advanced tracking and safe handling, your packages are always protected.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+    <p>&copy; 2025 Divine Shipping. All rights reserved.</p>
+  </footer>
+
+  <!-- Tracking Script -->
+  <script>
+    async function trackPackage() {
+      const trackingNumber = document.getElementById('trackingInput').value;
+
+      const response = await fetch('/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ trackingNumber })
+      });
+
+      const data = await response.json();
+
+      if (data.redirect) {
+        // Go to tracking.html with tracking ID
+        window.location.href = data.redirect;
+      } else {
+        document.getElementById('trackingResult').innerText = data.message;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1b1b1b;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tracking-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #2c2c2c;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff6600;
+      margin-bottom: 1.5rem;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background: url('https://cdn.prod.website-files.com/637d6390b70424b49c14ff1e/67d3360f5bfd6b53b031d804_google-maps-route-planner-for-deliveries-HERO.webp') center/cover no-repeat;
+      /* Map image */
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    /* Animated plane icon */
+    .moving-plane {
+      position: absolute;
+      top: 80%;
+      left: 5%;
+      width: 40px;
+      z-index: 10;
+      animation: fly 8s linear infinite;
+    }
+
+    /* Trail line */
+    .trail {
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: #ffcc00;
+      top: 82%;
+      left: 5%;
+      animation: draw 8s linear infinite;
+    }
+
+    @keyframes fly {
+      0% {
+        top: 80%;
+        left: 5%;
+        transform: rotate(0deg);
+      }
+
+      50% {
+        top: 30%;
+        left: 50%;
+        transform: rotate(45deg);
+      }
+
+      100% {
+        top: 80%;
+        left: 95%;
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes draw {
+      0% {
+        width: 0;
+      }
+
+      50% {
+        width: 45%;
+      }
+
+      100% {
+        width: 90%;
+      }
+    }
+
+    .tracking-details {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .tracking-details p span {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .status {
+      font-weight: bold;
+      color: #ff6600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tracking-container">
+    <h1>Item’s Current Location</h1>
+
+    <div class="map-container">
+      <div class="trail"></div>
+      <!-- Plane icon -->
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Plane Icon" class="moving-plane">
+    </div>
+
+    <div class="tracking-details">
+      <p><strong>Tracking ID:</strong> <span id="trackingId"></span></p>
+      <p><strong>Current Location:</strong> <span id="currentLocation"></span></p>
+      <p><strong>Destination:</strong> <span id="destination"></span></p>
+      <p><strong>Status:</strong> <span class="status" id="status"></span></p>
+    </div>
+  </div>
+
+  <script>
+    async function loadTrackingData() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const trackingNumber = urlParams.get("id");
+
+      const response = await fetch(`/track/${trackingNumber}`);
+      const data = await response.json();
+
+      document.getElementById("trackingId").innerText = trackingNumber;
+      document.getElementById("currentLocation").innerText = data.currentLocation;
+      document.getElementById("destination").innerText = data.destination;
+      document.getElementById("status").innerText = data.status;
+    }
+
+    loadTrackingData();
+  </script>
+</body>
+
+</html>
