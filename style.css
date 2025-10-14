@@ -221,6 +221,72 @@ li a {
   background: transparent;
 }
 
+/* advertisement */
+.advertisement-text {
+  padding: 0.5rem 1rem;
+}
+
+.advertisement-text p {
+  font-size: 15px;
+}
+
+.advertisement-section h2,
+p {
+  text-align: center;
+}
+
+.advertisement {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.advertisement-cards img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.advertisement-cards {
+  overflow: hidden;
+  flex: 1 1 30%;
+  /* Grow, shrink, base width 30% */
+  max-width: 548px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.advertisement-cards h2 {
+
+  margin: 15px 0 10px;
+}
+
+.advertisement-cards button {
+  color: #0d6883;
+  padding: 1rem 2rem;
+  border: 2px solid #0d6883;
+  border-radius: 30px;
+  background: transparent;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .advertisement {
+    flex-direction: column;
+    /* stack vertically */
+    align-items: center;
+  }
+
+  .advertisement-cards {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
 /* Footer */
 .footer {
   background: #090808;

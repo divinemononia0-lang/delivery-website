@@ -6,14 +6,14 @@ app.use(express.static(__dirname)); // serve HTML/CSS
 // Fake database
 let shipments = {
   "ABC123": {
-    currentLocation: "Lagos, Nigeria",
-    destination: "New York, USA",
-    status: "In Transit"
+    currentLocation: "Köln, Deutschland",
+    destination: "Sylter Straße 47,Sachsen Deutschland ",
+    status: "Nicht geliefert"
   },
   "XYZ789": {
-    currentLocation: "London, UK",
-    destination: "Toronto, Canada",
-    status: "Not Delivered"
+    currentLocation: "Köln, Deutschland",
+    destination: "Sylter Straße 47,Sachsen Deutschland ",
+    status: "Nicht geliefert"
   }
 };
 
