@@ -11,7 +11,7 @@ let shipments = {
     status: "Paket unterwegs"
   },
   "XYZ789": {
-    currentLocation: "Hanburg, Deutschland",
+    currentLocation: "Hamburg, Deutschland",
     destination: "Elfriede Müller Fleischmann 87459 pfronten Refleüten Peter Heelstrasse36",
     status: "Paket unterwegs"
   }
