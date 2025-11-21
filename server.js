@@ -8,12 +8,12 @@ let shipments = {
   "ABC123": {
     currentLocation: "Köln, Deutschland",
     destination: "Sylter Straße 47,Sachsen Deutschland ",
-    status: "Nicht geliefert"
+    status: "Paket unterwegs"
   },
   "XYZ789": {
-    currentLocation: "Köln, Deutschland",
-    destination: "Sylter Straße 47,Sachsen Deutschland ",
-    status: "Nicht geliefert"
+    currentLocation: "Hanburg, Deutschland",
+    destination: "Elfriede Müller Fleischmann 87459 pfronten Refleüten Peter Heelstrasse36",
+    status: "Paket unterwegs"
   }
 };
 
