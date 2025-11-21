@@ -10,8 +10,8 @@ let shipments = {
     destination: "Sylter Straße 47,Sachsen Deutschland ",
     status: "Paket unterwegs"
   },
-  "XYZ789": {
-    currentLocation: "Hamburg, Deutschland",
+  "xyz789": {
+    currentLocation: "Hamburg,Deutschland",
     destination: "Elfriede Müller Fleischmann 87459 pfronten Refleüten Peter Heelstrasse36",
     status: "Paket unterwegs"
   }
