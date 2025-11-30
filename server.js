@@ -5,9 +5,9 @@ app.use(express.static(__dirname)); // serve HTML/CSS
 
 // Fake database
 let shipments = {
-  "ABC123": {
-    currentLocation: "Köln, Deutschland",
-    destination: "Sylter Straße 47,Sachsen Deutschland ",
+  "551091": {
+    currentLocation: "Köln",
+    destination: "Vatterstraßeb 57 Frankfurt",
     status: "Paket unterwegs"
   },
   "441092": {
