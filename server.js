@@ -6,12 +6,12 @@ app.use(express.static(__dirname)); // serve HTML/CSS
 // Fake database
 let shipments = {
   "551091": {
-    currentLocation: "Köln",
+    currentLocation: "Paket wurde vom Zoll festgehalten",
     destination: "Vatterstraßeb 57 Frankfurt",
     status: "Paket unterwegs"
   },
   "441092": {
-    currentLocation: "Paket wird von der Task Force festgehalten",
+    currentLocation: "Paket wurde vom Zoll festgehalten",
     destination: "Elfriede Müller Fleischmann 87459 pfronten Refleüten Peter Heelstrasse36",
     status: "Paket unterwegs"
   }
