@@ -6,7 +6,7 @@ app.use(express.static(__dirname)); // serve HTML/CSS
 // Fake database
 let shipments = {
   "551091": {
-    currentLocation: "Paket wurde vom Zoll festgehalten ⚠️⚠️⚠️",
+    currentLocation: "Paket wurde vom Zoll festgehalten ⚠️",
     destination: "Vatterstraßeb 57 Frankfurt",
     status: "Paket unterwegs"
   },
