@@ -10,9 +10,9 @@ let shipments = {
     destination: "Vatterstraßeb 57 Frankfurt",
     status: "Paket unterwegs"
   },
-  "441092": {
-    currentLocation: "Paket wurde vom Zoll festgehalten",
-    destination: "Elfriede Müller Fleischmann 87459 pfronten Refleüten Peter Heelstrasse36",
+  "44109261": {
+    currentLocation: "Stuttgart, 70565 / Stuttgart Paketzentrum",
+    destination: "Joachim-a-Burgk-Str.3c 39288 Burg near Magdeburg,Deutschland",
     status: "Paket unterwegs"
   }
 };
