@@ -11,7 +11,7 @@ let shipments = {
     status: "Paket unterwegs"
   },
   "44109261": {
-    currentLocation: "Stuttgart, 70565 / Stuttgart Paketzentrum",
+    currentLocation: "DHL Paketzentrum Leipzig, 04356 Leipzig",
     destination: "Joachim-a-Burgk-Str.3c 39288 Burg near Magdeburg,Deutschland",
     status: "Paket unterwegs"
   }
