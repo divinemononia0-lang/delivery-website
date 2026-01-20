@@ -11,8 +11,8 @@ let shipments = {
     status: "Paket unterwegs"
   },
   "44109261": {
-    currentLocation: "DHL Paketzentrum Leipzig, 04356 Leipzig",
-    destination: "Joachim-a-Burgk-Str.3c 39288 Burg near Magdeburg,Deutschland",
+    currentLocation: "PostNL-Sortierzentrum, Amsterdam Hub",
+    destination: "Willy beerninkbelt husingecamp 7 7824ER emmen",
     status: "Paket unterwegs"
   }
 };
@@ -40,4 +40,3 @@ app.get('/track/:id', (req, res) => {
 // ✅ Start server (Render-ready)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
