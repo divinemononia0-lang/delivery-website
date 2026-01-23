@@ -11,7 +11,7 @@ let shipments = {
     status: "Paket unterwegs"
   },
   "44109261": {
-    currentLocation: "PostNL-Sortierzentrum Tilburg",
+    currentLocation: "Aangekomen bij het distributiecentrum van PostL-Asse",
     destination: "Willy beerninkbelt husingecamp 7 7824ER emmen",
     status: "Paket unterwegs"
   }
