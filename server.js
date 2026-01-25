@@ -11,9 +11,9 @@ let shipments = {
     status: "Paket unterwegs"
   },
   "44109261": {
-    currentLocation: "Aangekomen bij het distributiecentrum van PostL-Asse",
+    currentLocation: "Pakket vastgehouden door de douane",
     destination: "Willy beerninkbelt husingecamp 7 7824ER emmen",
-    status: "Paket unterwegs"
+    status: "pakket in beslag genomen"
   }
 };
 
